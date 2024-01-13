@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script
+    crossorigin=""
+     src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script 
+    crossorigin=""
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script
+    crossorigin=""
+    src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+</body>
+
+<script type="text/babel">
+let root = document.getElementById("root"); 
+let rootElement = ReactDOM.createRoot(root);
+
+let props= {
+
+    backgroundColor:"rgb(255,228,196)",
+    height:'220px',
+    border:'3px solid black',
+    display:'flex',
+    // fontWight:'bold',
+    justifyContent: 'center',
+    fontSize:'40px'
+}
+
+    
+let div1 = {
+    border: '3px solid black',
+    backgroundColor:"rgb(255,0,0)",
+    height: '170px',
+    width: '150px',
+    margin: '24px',
+    paddingLeft: '20px',
+    
+    
+};
+
+let div2 = {
+    backgroundColor:"rgb(255,255,0)",
+    border: '3px solid black',
+    height: '170px',
+    width: '150px',
+    margin: '24px',
+    paddingLeft: '20px',
+    
+    
+};
+
+let div3 = {
+    backgroundColor:"rgb(0,128,0)",
+    border: '3px solid black',
+    height: '170px',
+    width: '150px',
+    margin: '24px',
+    paddingLeft: '20px',
+    
+    
+};
+
+let div4 = {
+    backgroundColor:"rgb(128,0,128)",
+    border: '3px solid black',
+    height: '170px',
+    width: '150px',
+    margin: '24px',
+    paddingLeft: '20px',
+    
+    
+};
+
+
+
+
+
+let h1={
+    fontSize: '30px',
+            alignSelf: 'flex-start'
+    // justifyContent:'flex-start'
+      }  
+    
+
+
+
+
+
+    let flex = React.createElement("div",{ id:"parent",style:props },[
+        React.createElement("h4",{style:h1} , null , 'parent'),
+        React.createElement("div",{style:div1},"1"),
+        React.createElement("div",{style:div2},"2"),
+        React.createElement("div",{style:div3},"3"),
+        React.createElement("div",{style:div4},"4")
+    ]);
+
+rootElement.render(flex);
+
+</script>
+
+</html>
